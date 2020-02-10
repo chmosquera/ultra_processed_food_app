@@ -1,0 +1,3 @@
+# ignore pytorch environment
+/venv/.
+/.idea/.
