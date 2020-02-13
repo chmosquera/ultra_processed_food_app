@@ -1,3 +1,5 @@
 # ignore pytorch environment
 ./venv/.
 ./.idea/.
+__pycache__
+.~discard_cache.pkl
