@@ -1,8 +1,8 @@
-from usda import UsdaClient
+import app
 
-client = UsdaClient('AemedCUPSQHBrbfoJdkfrdFSbtS9ogDP7YpCWDTN')
+def main():
+    appInstance = app.UltraProcessedFoodApp()
+    appInstance.run()
 
-foods_list = client.list_foods(5)
-for _ in  range(5):
-        food_item = next(foods_list)
-        print(food_item.name)
+if __name__ == '__main__':
+        main()
