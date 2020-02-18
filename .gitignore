@@ -1,5 +1,18 @@
 # ignore pytorch environment
 ./venv/.
 ./.idea/.
+
+# Ignore python cache files
 __pycache__
-.~discard_cache.pkl
+
+# Ignore crawler discard cache pickle files
+.~discard_cache*.pkl
+
+# Ignore open food facts database dump
+en.openfoodfacts.org.products.csv
+
+# Ignore visual studio code workspace
+.vscode
+
+# Ignore crawler output
+utility/*.csv
