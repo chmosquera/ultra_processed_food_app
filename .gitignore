@@ -16,3 +16,4 @@ en.openfoodfacts.org.products.csv
 
 # Ignore crawler output
 utility/*.csv
+utility/*.log

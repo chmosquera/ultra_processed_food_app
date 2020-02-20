@@ -5,38 +5,82 @@ from fdc import FdcClient
 from os import environ
 from sys import stderr
 from datetime import date
+import time
 
 DISCARD_CACHE = ".~discard_cache.pkl"
 CACHE_SAVE_INTERVAL = 500
 MATCH_LOG = "ff_to_usda_matching.log"
 ENABLE_MATCH_LOG = True
 
-class OffToUsdaConverter:
-    def __init__(self, header: list, minimumScore = 100.0):
-        self.client = FdcClient(environ['USDA_API_KEY'])
-        self.minimumScore = minimumScore
-        self.totalItr = 0
-        self.matchLog = None
-        self.discardCount = 0
-        self.header = header
-        self.outputHeader = ["code", "product_name", "nova_group", "ingredients"]
-        self.data = []
-        self.init_discard_cache(DISCARD_CACHE)
-        self.codeidx, self.countryidx, self.novaidx, self.nameidx, self.brandsidx = get_header_indices(header)
+SHOULD_RETRY = True
+RETRY_ATTEMPTS = 5
+RETRY_DELAY = 60*3 # 3 minutes
 
+class OffToUsdaConverter:
+    def __init__(self, header: list, minimumScore = 100.0, picklePath = None):
+        if(picklePath != None):
+            self.load_state(picklePath)
+        else:
+            self.minimumScore = minimumScore
+            self.totalItr = 0
+            self.matchLog = None
+            self.discardCount = 0
+            self.data = []
+            self.init_discard_cache(DISCARD_CACHE)
+            self.header = header
+            self.outputHeader = ["code", "product_name", "nova_group", "ingredients"]
+            self.codeidx, self.countryidx, self.novaidx, self.nameidx, self.brandsidx = get_header_indices(header)
+            self.client = FdcClient(environ['USDA_API_KEY'])
+
+    def save_state(self, path="./.~OffToUsdaConverter.state.pkl"):
+        pickleJar = open(path, 'wb')
+        pickle.dump(self,  pickleJar)
+        pickleJar.close()
+
+    def load_state(self, path="./.~OffToUsdaConverter.state.pkl"):
+        try:
+            pickleJar = open(path, 'rb');
+            self = pickle.load(pickleJar)
+            pickleJar.close()
+        except Exception as e:
+            pass
+    
     def convert(self, csvprods:list):
+        if(self.totalItr != 0):
+            for _ in range(totalItr): next(csvprods);
         if(ENABLE_MATCH_LOG):
             self.matchLog = open(MATCH_LOG, 'a')
             self.matchLog.write(f"Starting {date.today().ctime()}, with minimum score {self.minimumScore}\n")
 
         try:
             for product in csvprods:
-                self.match_product(product)
+                try:
+                    self.match_product(product)
+                except requests.exceptions.HTTPError as e:
+                    print("\n", e, sep='', file=stderr)
+                    tryCounter = 0
+                    if(e.response.raw.status == 500):
+                        print(f"Server Error on entry {self.totalItr} ({product[self.codeidx]}), skipping entry...", file=stderr)
+                        continue
+                    if(SHOULD_RETRY and e.response.raw.status != 500):
+                        while(tryCounter < RETRY_ATTEMPTS):
+                            tryCounter+=1
+                            print(f"Failed to contact FDC retrying in 3 minutes, retry #{tryCounter}", file = stderr)
+                            time.sleep(RETRY_DELAY)
+                            try:
+                                self.match_product(product)
+                                break
+                            except requests.exceptions.HTTPError as e:
+                                print(e)
+                                pass
+                        continue
+                    raise e
+
         except KeyboardInterrupt as e:
             print("Caught Interupt. Exiting gracefully...")
             pass
         except requests.exceptions.HTTPError as e:
-            print("HTTP error: You probably need to give the API a break", file=stderr)
+            print("HTTP error: You might need to give the API a break", file=stderr)
             print(e)
 
         finalReport = self.format_progress()
@@ -55,7 +99,7 @@ class OffToUsdaConverter:
 
     def match_product(self, product):
         self.totalItr += 1
-        print(f"Found {self.totalItr - self.discardCount} matches and discarded {self.discardCount} after {self.totalItr} entries", end = '\r')
+        print(self.format_progress(), end = '\r')
 
         if(self.totalItr % CACHE_SAVE_INTERVAL == 0):
             self.write_discard_cache(DISCARD_CACHE)
@@ -111,7 +155,7 @@ class OffToUsdaConverter:
         pickleJar.close()
 
     def format_progress(self):
-        return(f"Found {self.totalItr - self.discardCount} matches and discarded {self.discardCount} after {self.totalItr} entries")
+        return(f"Found {self.totalItr - self.discardCount} matches and discarded {self.discardCount} of {self.totalItr} entries")
 
     def format_log_entry(self, product, bestMatch):
         goodEnough = float(bestMatch['score']) >= self.minimumScore
