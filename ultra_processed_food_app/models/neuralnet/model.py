@@ -8,6 +8,7 @@ class Model(imports.nn.Module):
         self.all_embeddings = imports.nn.ModuleList([imports.nn.Embedding(ni, nf) for ni, nf in embedding_size])
         self.embedding_dropout = imports.nn.Dropout(p)
         self.batch_norm_num = imports.nn.BatchNorm1d(num_numerical_cols)
+        self.loss_function = imports.nn.CrossEntropyLoss()
 
         all_layers = []
         num_categorical_cols = sum((nf for ni, nf in embedding_size))
@@ -25,7 +26,6 @@ class Model(imports.nn.Module):
         self.layers = imports.nn.Sequential(*all_layers)
 
     def train_model(self, categorical_train_data, numerical_train_data, train_outputs):
-        loss_function = imports.nn.CrossEntropyLoss()
         optimizer = imports.torch.optim.Adam(self.parameters(), lr=0.001)
 
         epochs = 300
@@ -34,7 +34,7 @@ class Model(imports.nn.Module):
         for i in range(epochs):
             i += 1
             y_pred = self.forward(categorical_train_data, numerical_train_data)
-            single_loss = loss_function(y_pred, train_outputs)
+            single_loss = self.loss_function(y_pred, train_outputs)
             aggregated_losses.append(single_loss)
 
             if i % 25 == 1:
@@ -45,16 +45,6 @@ class Model(imports.nn.Module):
             optimizer.step()
 
         print(f'epoch: {i:3} loss: {single_loss.item():10.10f}')
-        return loss_function
-
-    def get_predictions(self, categorical_test_data, numerical_test_data, loss_function, test_outputs=[]):
-        with imports.torch.no_grad():
-            y_val = self.forward(categorical_test_data, numerical_test_data)
-            loss = loss_function(y_val, test_outputs)
-        print(f'Loss: {loss:.8f}')
-
-        y_val = imports.np.argmax(y_val, axis=1)
-        return y_val
 
     def forward(self, x_categorical, x_numerical):
         embeddings = []
@@ -71,3 +61,16 @@ class Model(imports.nn.Module):
         x = imports.torch.cat([x, x_numerical], 1)
         x = self.layers(x)
         return x
+
+    def get_predictions(self, categorical_test_data, numerical_test_data, test_outputs=None):
+        if test_outputs is None:
+            test_outputs = []
+        with imports.torch.no_grad():
+            y_val = self.forward(categorical_test_data, numerical_test_data)
+            if len(test_outputs) == 0:
+                loss = self.loss_function(y_val, test_outputs)
+                print(f'Loss: {loss:.8f}')
+
+        y_val = imports.np.argmax(y_val, axis=1)
+        return y_val
+
