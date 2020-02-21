@@ -13,7 +13,12 @@ def main():
         filterFunc = lambda pentry: pentry[countryidx] == "United States"
         us_foods = filter(filterFunc, reader)
 
-        converter = OffToUsdaConverter(header, SCORE_MINIMUM)
+        converter = None
+        try:
+            converter = OffToUsdaConverter.load_from_pickle()
+        except:
+            converter = OffToUsdaConverter(header, SCORE_MINIMUM)
+        
         header, data = converter.convert(us_foods)
 
         del reader

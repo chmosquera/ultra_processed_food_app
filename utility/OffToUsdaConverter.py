@@ -32,22 +32,24 @@ class OffToUsdaConverter:
             self.codeidx, self.countryidx, self.novaidx, self.nameidx, self.brandsidx = get_header_indices(header)
             self.client = FdcClient(environ['USDA_API_KEY'])
 
+    @classmethod
+    def load_from_pickle(cls, path="./.~OffToUsdaConverter.state.pkl"):
+        pickleJar = open(path, 'rb');
+        converter = pickle.load(pickleJar)
+        pickleJar.close()
+        return converter
+
     def save_state(self, path="./.~OffToUsdaConverter.state.pkl"):
         pickleJar = open(path, 'wb')
-        pickle.dump(self,  pickleJar)
+        matchLog = self.matchLog
+        self.matchLog = None
+        pickle.dump(self, pickleJar)
         pickleJar.close()
-
-    def load_state(self, path="./.~OffToUsdaConverter.state.pkl"):
-        try:
-            pickleJar = open(path, 'rb');
-            self = pickle.load(pickleJar)
-            pickleJar.close()
-        except Exception as e:
-            pass
+        self.matchLog = matchLog
     
     def convert(self, csvprods:list):
         if(self.totalItr != 0):
-            for _ in range(totalItr): next(csvprods);
+            for _ in range(self.totalItr): next(csvprods);
         if(ENABLE_MATCH_LOG):
             self.matchLog = open(MATCH_LOG, 'a')
             self.matchLog.write(f"Starting {date.today().ctime()}, with minimum score {self.minimumScore}\n")
@@ -62,6 +64,10 @@ class OffToUsdaConverter:
                     if(e.response.raw.status == 500):
                         print(f"Server Error on entry {self.totalItr} ({product[self.codeidx]}), skipping entry...", file=stderr)
                         continue
+                    elif(e.response.raw.status == 429):
+                        print("Too many requests. Waiting for an hour...", file=stderr)
+                        time.sleep(60*61)
+                        self.match_product(product)
                     if(SHOULD_RETRY and e.response.raw.status != 500):
                         while(tryCounter < RETRY_ATTEMPTS):
                             tryCounter+=1
@@ -83,11 +89,18 @@ class OffToUsdaConverter:
             print("HTTP error: You might need to give the API a break", file=stderr)
             print(e)
 
+        prodsFinished = False
+        try:
+            next(csvprods)
+        except StopIteration:
+            prodsFinished = True
+
         finalReport = self.format_progress()
         print("Finish:", finalReport)
 
-        print("Saving discard cache...")
-        self.write_discard_cache(DISCARD_CACHE)
+        if(not prodsFinished):
+            print("Saving state...")
+            self.save_state()
 
         if(ENABLE_MATCH_LOG):
             finish = f"Finished {date.today().ctime()}, " + finalReport
