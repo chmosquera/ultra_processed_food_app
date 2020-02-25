@@ -75,8 +75,8 @@ class ScannerInput(TextInput):
             nova_score = app.get_running_app().models_aggregator.get_score(app.reportData.ingredients)
 
             novaAvailable = productResult['status'] == 1 and 'nova_group' in productResult['product']
-            #app.reportData.nova = productResult['product']['nova_group'] if novaAvailable else "<Unavailable>"
-            app.reportData.nova = nova_score
+            app.reportData.nova = productResult['product']['nova_group'] if novaAvailable else "<Unavailable>"
+            #app.reportData.nova = nova_score #TODO 
 
         except StopIteration:
             app.reportData = None
