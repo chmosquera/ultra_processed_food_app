@@ -25,7 +25,7 @@ class DummyModel:
 class Aggregator:  
     
     # Inputs:
-    #   - model_classes: a list of references to AI model classes.
+    #   - model_classes: a list of references to AI model python classes.
     #   - num_models: the total desired number of models. Each model in model_classes will will an equal 
     #                 number of models generated, adding up to num_models.
     # Example initialization: 'Aggregator([DummyModel, DummyModel, DummyModel], 30)'

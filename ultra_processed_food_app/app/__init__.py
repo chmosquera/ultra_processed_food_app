@@ -10,6 +10,8 @@ from kivy.uix.progressbar import ProgressBar
 
 import fdc
 import openfoodfacts
+from aggregator import Aggregator
+from aggregator import DummyModel
 
 USDA_API_KEY = 'AemedCUPSQHBrbfoJdkfrdFSbtS9ogDP7YpCWDTN'
 
@@ -70,9 +72,11 @@ class ScannerInput(TextInput):
             app.reportData.ingredients = res1['ingredients'] if 'ingredients' in res1 else "<Unavailable>"
             app.reportData.score = res1['score'] if 'score' in res1 else "<Unavailable>"
 
-            novaAvailable = productResult['status'] == 1 and 'nova_group' in productResult['product']
-            app.reportData.nova = productResult['product']['nova_group'] if novaAvailable else "<Unavailable>"
+            nova_score = app.get_running_app().models_aggregator.get_score(app.reportData.ingredients)
 
+            novaAvailable = productResult['status'] == 1 and 'nova_group' in productResult['product']
+            #app.reportData.nova = productResult['product']['nova_group'] if novaAvailable else "<Unavailable>"
+            app.reportData.nova = nova_score
 
         except StopIteration:
             app.reportData = None
@@ -105,8 +109,11 @@ class ReportData:
 kv_file = Builder.load_file("app/interface.kv")
 
 class UltraProcessedFoodApp(App):
+
     def __init__(self, **kwargs):
         self.reportData = None
+        #insert your model class names here. Replace 'DummyModel' with your ai model class name
+        self.models_aggregator = Aggregator([DummyModel, DummyModel, DummyModel], 90)
         super(UltraProcessedFoodApp, self).__init__(**kwargs)
 
     def build(self):
