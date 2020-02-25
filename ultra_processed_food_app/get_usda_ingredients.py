@@ -25,6 +25,9 @@ def listToString(s):
     # return string   
     return str1 
 
+
+# Input: a barcode of a food product (Int)
+# Output: a list of ingredients OR 'None' if no item found with given barcode
 def get_usda_ingredients(barcode):
     client = FdcClient("BqVzh5bSi91ZKipGWp8e3axaH1jA8ujsYWpZp9WY")
     
@@ -34,7 +37,7 @@ def get_usda_ingredients(barcode):
     try:
         details = next(response)
         ingredients = ingredients_to_list(str(details['ingredients']))
-        #print("============================================================\n " + listToString(ingredients) + "\n============================================================")
+        #print("==============\n " + listToString(ingredients) + "\n("==============")
         return ingredients
 
     except StopIteration:
@@ -42,6 +45,8 @@ def get_usda_ingredients(barcode):
         return None
     
 
+# Input: string of ingredients seperated by commas
+# Output: A list of ingredient strings
 def ingredients_to_list(ingredients):
     
     outlist = []
@@ -59,6 +64,9 @@ def ingredients_to_list(ingredients):
 
     return outlist
     
+
+# Input: string of ingredients
+# Output: a tuple -> (first ingredient in input as string, string of the remaining ingredients)
 def strip_next_ingredient(ingredients):
 
     ingredient = ""

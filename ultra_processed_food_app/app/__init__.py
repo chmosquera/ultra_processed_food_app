@@ -15,11 +15,10 @@ import torch
 
 import fdc
 import openfoodfacts
-import sys
+from aggregator import Aggregator
+from aggregator import DummyModel
 
-sys.path.insert(1, 'models/neuralnet/')
-from foodData import FoodDataset
-import model
+from ultra_processed_food_app.models.neuralnet.nnModel import NNModel
 
 USDA_API_KEY = 'AemedCUPSQHBrbfoJdkfrdFSbtS9ogDP7YpCWDTN'
 
@@ -51,7 +50,6 @@ class ScannerInput(TextInput):
 
     report_target = ObjectProperty(None)
 
-
     def __init__(self, **kwargs):
         super(ScannerInput, self).__init__(**kwargs)
         self.fdcClient = fdc.FdcClient(USDA_API_KEY)
@@ -78,18 +76,20 @@ class ScannerInput(TextInput):
 
 
             app.reportData.brand = res1['brandOwner'] if 'brandOwner' in res1 else "<Unavailable>"
-
             app.reportData.ingredients = res1['ingredients'] if 'ingredients' in res1 else "<Unavailable>"
             app.reportData.score = res1['score'] if 'score' in res1 else "<Unavailable>"
 
             novaAvailable = productResult['status'] == 1 and 'nova_group' in productResult['product']
 
-            app.reportData.nova =
             # num_arr = [new_data_frame['num_ingredients'].values, new_data_frame['num_ingredients'].values]
 
 
             # app.reportData.nova = productResult['product']['nova_group'] if novaAvailable else "<Unavailable>"
+            nova_score = app.get_running_app().models_aggregator.get_score(app.reportData.ingredients)
 
+            novaAvailable = productResult['status'] == 1 and 'nova_group' in productResult['product']
+            #app.reportData.nova = productResult['product']['nova_group'] if novaAvailable else "<Unavailable>"
+            app.reportData.nova = nova_score
 
         except StopIteration:
             app.reportData = None
@@ -125,6 +125,8 @@ class UltraProcessedFoodApp(App):
 
     def __init__(self, **kwargs):
         self.reportData = None
+        #insert your model class names here. Replace 'DummyModel' with your ai model class name
+        self.models_aggregator = Aggregator([NNModel], [["filename"]])
         super(UltraProcessedFoodApp, self).__init__(**kwargs)
 
     def build(self):
