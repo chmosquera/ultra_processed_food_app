@@ -15,15 +15,12 @@ def main():
             load_model = arg
 
     food_data = foodData.FoodDataset(
-        "https://raw.githubusercontent.com/dlsun/data-science-book/master/data/titanic.csv",
-        ['pclass', 'sex'],
-        ['age'],
-        ['survived'],
-        0.2)
-    food_data.setup_data_frame()
+        "usda_products_1_human.csv", 0.2)
+    # food_data = foodData.FoodDataset(
+    #     "https://raw.githubusercontent.com/dlsun/data-science-book/master/data/titanic.csv", 0.2)
 
     if load_model == 'False':
-        nn_model = model.Model(food_data.categorical_embedding_sizes, food_data.numerical_data.shape[1], 2, [500, 250, 125],
+        nn_model = model.Model(food_data.categorical_embedding_sizes, food_data.numerical_data.shape[1], 4, [500, 250, 125],
                                p=0.5)
 
         nn_model.train_model(food_data.categorical_train_data, food_data.numerical_train_data, food_data.train_outputs)
@@ -42,7 +39,7 @@ def main():
         print(confusion_matrix(food_data.test_outputs, y_val))
         print(classification_report(food_data.test_outputs, y_val))
         print(accuracy_score(food_data.test_outputs, y_val))
-
+    #
 
 if __name__ == "__main__":
     main()

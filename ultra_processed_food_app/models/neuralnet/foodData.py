@@ -1,10 +1,17 @@
-import imports
+import torch
+import pandas as pd
+import numpy as np
+
+import sys
+
+sys.path.insert(1, '../../')
+import get_usda_ingredients
 
 
 class FoodDataset:
     """Food dataset."""
 
-    def __init__(self, csv_file, cat_vars, num_vars, output_vars, test_frac):
+    def __init__(self, csv_file, test_frac):
         """
         Args:
             csv_file (string): Path to the csv file with annotations.
@@ -12,10 +19,15 @@ class FoodDataset:
             transform (callable, optional): Optional transform to be applied
                 on a sample.
         """
-        self.data_frame = imports.pd.read_csv(csv_file)
-        self.categorical_columns = cat_vars
-        self.numerical_columns = num_vars
-        self.outputs = output_vars
+
+        self.data_frame = pd.read_csv(csv_file, sep='\t')
+
+        self.data_frame = self.data_frame.drop(0, axis=0).reset_index()
+        self.setup_data_frame()
+
+        self.categorical_columns = self.data_frame.columns[0:len(self.data_frame.columns)-5]
+        self.numerical_columns = ['num_ingredients']
+        self.outputs = ['hu_nova_score']
 
         for category in self.categorical_columns:
             self.data_frame[category] = self.data_frame[category].astype('category')
@@ -23,18 +35,24 @@ class FoodDataset:
         cat_arr = []
         for col in self.categorical_columns:
             cat_arr.append(self.data_frame[col].cat.codes.values)
-        self.categorical_data = imports.np.stack(cat_arr, 1)
-        self.categorical_data = imports.torch.tensor(self.categorical_data, dtype=imports.torch.int64)
+        self.categorical_data = np.stack(cat_arr, 1)
+        self.categorical_data = torch.tensor(self.categorical_data, dtype=torch.int64)
+
 
         num_arr = []
-        for col in self.categorical_columns:
-            num_arr.append(self.data_frame[col].cat.codes.values)
-        self.numerical_data = imports.np.stack(num_arr, 1)
-        self.numerical_data = imports.torch.tensor(self.numerical_data, dtype=imports.torch.float)
+        for col in self.numerical_columns:
+            num_arr.append(self.data_frame[col].values)
+        self.numerical_data = np.stack(num_arr, 1)
+        self.numerical_data = torch.tensor(self.numerical_data, dtype=torch.float)
 
-        self.output_data = imports.torch.tensor(self.data_frame[self.outputs].values).flatten()
 
-        for v in self.categorical_columns: self.data_frame[v] = self.data_frame[v].astype('category').cat.as_ordered()
+        self.data_frame = self.data_frame.astype({self.outputs[0]: 'int64'})
+        i=0
+        for row in self.data_frame[self.outputs[0]]:
+            self.data_frame[self.outputs[0]].iloc[i] = row - 1
+            i+=1
+        self.output_data = torch.tensor(self.data_frame[self.outputs].values).flatten()
+
         categorical_column_sizes = [(c, len(self.data_frame[c].cat.categories) + 1) for c in self.categorical_columns]
         self.categorical_embedding_sizes = [(c, min(50, (c + 1) // 2)) for _, c in categorical_column_sizes]
 
@@ -47,13 +65,27 @@ class FoodDataset:
         self.train_outputs = self.output_data[:sample_size]
         self.test_outputs = self.output_data[sample_size:]
 
+
     def __len__(self):
         return len(self.data_frame)
 
     def setup_data_frame(self):
-        features = ['pclass', 'survived', 'sex', 'age']
-        self.data_frame = self.data_frame.loc[:, features]
-        self.data_frame.loc[:, 'pclass'] = self.data_frame['pclass'].fillna(self.data_frame['pclass'].mode()).astype(int)
-        self.data_frame.loc[:, 'age'] = self.data_frame['age'].fillna(self.data_frame['age'].median())
-        self.data_frame.loc[:, 'age'] = (self.data_frame['age'] / 10).astype(str).str[0].astype(int) * 10
-        print(self.data_frame)
+        all_food_ingredients = []
+        for row in self.data_frame['ingredients']:
+            ingredients = get_usda_ingredients.ingredients_to_list(row)
+            all_food_ingredients = np.concatenate([all_food_ingredients, ingredients])
+        new_data_frame = pd.DataFrame(np.zeros((self.data_frame.shape[0], 1)))
+        for food_ingredients in all_food_ingredients:
+            new_data_frame[food_ingredients] = 0
+        new_data_frame['num_ingredients'] = 0
+        new_data_frame = new_data_frame.drop(0, axis=1)
+        new_data_frame = new_data_frame.loc[:, ~new_data_frame.columns.duplicated()]
+        for col in self.data_frame.drop('ingredients', axis=1).columns:
+            new_data_frame[col] = self.data_frame[col]
+        for index, row in self.data_frame.iterrows():
+            ingredients = get_usda_ingredients.ingredients_to_list(self.data_frame['ingredients'].iloc[index])
+            new_data_frame['num_ingredients'].iloc[index] = len(ingredients)
+            for ingredient in ingredients:
+                new_data_frame[ingredient].iloc[index] = 1
+        new_data_frame = new_data_frame.drop('index', axis=1)
+        self.data_frame = new_data_frame
