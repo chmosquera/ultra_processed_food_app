@@ -26,23 +26,16 @@ class Aggregator:
     
     # Inputs:
     #   - model_classes: a list of references to AI model python classes.
-    #   - num_models: the total desired number of models. Each model in model_classes will will an equal 
-    #                 number of models generated, adding up to num_models.
-    # Example initialization: 'Aggregator([DummyModel, DummyModel, DummyModel], 30)'
+    #   - model_file_saves: an array the same length as model_classes, where each element is a list of filenames where
+    #                       saved, trained models are stored.
+    # Example initialization: 'Aggregator([DummyModel, DummyModel], [['model_save1'],['model_save2', 'model_save3']])'
 
-    def __init__(self, model_classes, num_models):  
-        self.models = []  
+    def __init__(self, model_classes, model_file_saves):
+        self.models = []
 
-        #split models initialization for cases where num_models / len(model_classes) has some remainder
-
-        # builds the first (model_classes - 1) * num_models models
-        for model_index in range(len(model_classes) - 1):
-            for i in range(num_models // len(model_classes)):
-                self.models.append(model_classes[model_index](random.randint(1,4), random.random()))
-
-        # builds the last ((model_classes - 1) / models_classes) * num_models models
-        for i in range(num_models - ((num_models // len(model_classes)) * (num_models - 1))):
-            self.models.append(model_classes[model_index](random.randint(1,4), random.random()))
+        for i in range(len(model_classes)):
+            for model_file in model_file_saves[i]:
+                self.models.append(model_classes[i](model_file))
 
 
     # Input: ingredients - a string version of a list of ingredients.

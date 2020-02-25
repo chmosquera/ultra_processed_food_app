@@ -3,6 +3,7 @@ import torch.nn as nn
 import numpy as np
 import pandas as pd
 import sys
+from sklearn.externals import joblib
 
 sys.path.insert(1, '../../')
 import get_usda_ingredients
@@ -41,10 +42,7 @@ class Model(nn.Module):
         for i in range(epochs):
             i += 1
             y_pred = self.forward(categorical_train_data, numerical_train_data)
-            # print(y_pred)
-            # print(y_pred.shape)
-            # print(train_outputs)
-            # print(train_outputs.shape)
+
             single_loss = self.loss_function(y_pred, train_outputs)
             aggregated_losses.append(single_loss)
 
@@ -64,11 +62,8 @@ class Model(nn.Module):
         x = torch.cat(embeddings, 1)
         x = self.embedding_dropout(x)
 
-        print('before: ')
-        print(x_numerical)
         x_numerical = self.batch_norm_num(x_numerical)
-        print('after: ')
-        print(x_numerical)
+
         x = torch.cat([x, x_numerical], 1)
         x = self.layers(x)
         return x
@@ -101,15 +96,11 @@ class Model(nn.Module):
         cat_arr = []
         for col in new_data_frame.columns[0:len(new_data_frame.columns) - 5]:
             cat_arr.append(new_data_frame[col].cat.codes.values)
-        print(len(cat_arr))
         num_arr = []
-        print(new_data_frame)
         for col in new_data_frame.columns[len(new_data_frame.columns) - 5: len(new_data_frame.columns) - 4]:
             num_arr.append(new_data_frame[col].values)
-        print(len(num_arr))
         cat_test_data = np.stack(cat_arr, 1)
         cat_test_data = torch.tensor(cat_test_data, dtype=torch.int64)
         num_test_data = np.stack(num_arr, 1)
         num_test_data = torch.tensor(num_test_data, dtype=torch.float)
         return self.nn_model.get_predictions(cat_test_data, num_test_data)[0] + 1
-

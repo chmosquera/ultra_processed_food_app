@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="efc1a9cf-12a3-425a-b1b7-1d2225a4b954" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/foodData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnmodel1.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnmodel2.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/usda_products_1_human.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel1.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel2.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/usda_products_1_human.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/aggregator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/aggregator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnModel.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="0d364908-72b0-4f13-bc74-403b03baa888" />
+  <component name="ProjectId" id="1XzbGWsu0t4fYLZ9QZObUrS0IHN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ultra_processed_food_app" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ultra_processed_food_app" />
+      <recent name="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
+      <recent name="$PROJECT_DIR$/ultra_processed_food_app/models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ultra_processed_food_app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ultra_processed_food_app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ultra_processed_food_app/__main__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ultra_processed_food_app" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.__main__" />
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efc1a9cf-12a3-425a-b1b7-1d2225a4b954" name="Default Changelist" comment="" />
+      <created>1582051774375</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582051774375</updated>
+      <workItem from="1582051799092" duration="986000" />
+      <workItem from="1582222237974" duration="2771000" />
+      <workItem from="1582317223444" duration="2096000" />
+      <workItem from="1582486246195" duration="11045000" />
+      <workItem from="1582643159706" duration="20423000" />
+    </task>
+    <task id="LOCAL-00001" summary="adding neural network to existing project">
+      <created>1582226057195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582226057195</updated>
+    </task>
+    <task id="LOCAL-00002" summary="implemented pickle to save and load a ml model">
+      <created>1582319303307</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582319303307</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added nn model to ui">
+      <created>1582655020279</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582655020280</updated>
+    </task>
+    <task id="LOCAL-00004" summary="made wrapper">
+      <created>1582661931952</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582661931953</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding neural network to existing project" />
+    <MESSAGE value="implemented pickle to save and load a ml model" />
+    <MESSAGE value="added nn model to ui" />
+    <MESSAGE value="made wrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="made wrapper" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2000" y="76" key="#Inspections" timestamp="1582318894303">
+      <screen x="1440" y="-129" width="1920" height="1080" />
+    </state>
+    <state x="2000" y="76" key="#Inspections/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582318894303" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582666723952">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1582666723952" />
+    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582661223436">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1582661223436" />
+    <state x="477" y="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582051853740">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="477" y="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1582051853740" />
+    <state x="265" y="54" key="CommitChangelistDialog2" timestamp="1582661931753">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="1793" y="-64" key="CommitChangelistDialog2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319303028" />
+    <state x="265" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1582661931753" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1582665804818">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193329" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582665804818" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1582665804817">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="303" key="GridCell.Tab.0.center/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193327" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1582665804817" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1582665804817">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="303" key="GridCell.Tab.0.left/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193326" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1582665804817" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1582665804818">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="303" key="GridCell.Tab.0.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193328" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1582665804818" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1582663369618">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384021" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582663369618" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1582659600491" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1582663369616">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384016" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1582663369616" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1582659600489" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1582663369615">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384015" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1582663369615" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1582659600488" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1582663369617">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384017" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1582663369617" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1582659600490" />
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2" timestamp="1582655021657">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="2000" y="151" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319335177" />
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1582655021657" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582663058166">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.797@0.23.1440.797" timestamp="1582663058166" />
+    <state x="378" y="85" width="683" height="729" key="find.popup" timestamp="1582490098954">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="378" y="85" width="683" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1582490098954" />
+    <state x="352" y="248" key="git4idea.merge.GitPullDialog" timestamp="1582661942792">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="352" y="248" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1582661942792" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ultra_processed_food_app$main.coverage" NAME="main Coverage Results" MODIFIED="1582664183222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
+    <SUITE FILE_PATH="coverage/ultra_processed_food_app$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1582665804808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app" />
+  </component>
+</project>
