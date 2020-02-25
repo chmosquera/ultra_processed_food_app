@@ -7,9 +7,10 @@ from kivy.uix.textinput import TextInput
 from kivy.properties import ObjectProperty
 from kivy.clock import Clock
 from kivy.uix.progressbar import ProgressBar
-from get_usda_ingredients import get_usda_ingredients
+import get_usda_ingredients
 from sklearn.externals import joblib
 import numpy as np
+import pandas as pd
 import torch
 
 import fdc
@@ -54,9 +55,6 @@ class ScannerInput(TextInput):
     def __init__(self, **kwargs):
         super(ScannerInput, self).__init__(**kwargs)
         self.fdcClient = fdc.FdcClient(USDA_API_KEY)
-        self.food_data = FoodDataset("usda_products_1_human.csv", 0.2)
-
-        self.nn_model = joblib.load('filename.pkl')
 
     def on_parent(self, widget, parent):
         self.refocus()
@@ -85,22 +83,11 @@ class ScannerInput(TextInput):
             app.reportData.score = res1['score'] if 'score' in res1 else "<Unavailable>"
 
             novaAvailable = productResult['status'] == 1 and 'nova_group' in productResult['product']
-            ingredient_list = get_usda_ingredients(app.reportData.ingredients)
-            new_data_frame = self.food_data.data_frame.iloc[0]
-            for col in new_data_frame.columns[0:len(new_data_frame.columns) - 5]:
-                if col in ingredient_list:
-                    new_data_frame[col] = 1
-                else:
-                    new_data_frame[col] = 0
-            for category in new_data_frame.columns[0:len(new_data_frame.columns) - 5]:
-                new_data_frame[category] = new_data_frame[category].astype('category')
 
-            cat_arr = []
-            for col in new_data_frame.columns[0:len(new_data_frame.columns) - 5]:
-                cat_arr.append(new_data_frame[col].cat.codes.values)
-            cat_test_data = np.stack(cat_arr, 1)
-            cat_test_data = torch.tensor(cat_test_data, dtype=torch.int64)
-            app.reportData.nova = self.nn_model.get_predictions(cat_test_data, [len(ingredient_list)]) + 1
+            app.reportData.nova =
+            # num_arr = [new_data_frame['num_ingredients'].values, new_data_frame['num_ingredients'].values]
+
+
             # app.reportData.nova = productResult['product']['nova_group'] if novaAvailable else "<Unavailable>"
 
 
