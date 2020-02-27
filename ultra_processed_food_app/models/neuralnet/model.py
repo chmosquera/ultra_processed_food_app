@@ -3,7 +3,6 @@ import torch.nn as nn
 import numpy as np
 import pandas as pd
 import sys
-from sklearn.externals import joblib
 
 sys.path.insert(1, '../../')
 import get_usda_ingredients
@@ -82,7 +81,7 @@ class Model(nn.Module):
 
     def get_score(self, ingredients_str):
         ingredient_list = get_usda_ingredients.ingredients_to_list(ingredients_str)
-        new_data_frame = pd.DataFrame()
+        new_data_frame = pd.DataFrame(np.zeros((1, len(self.column_names))))
         new_data_frame.columns = self.column_names
         for col in new_data_frame.columns[0:len(new_data_frame.columns) - 5]:
             if col in ingredient_list:
@@ -103,4 +102,4 @@ class Model(nn.Module):
         cat_test_data = torch.tensor(cat_test_data, dtype=torch.int64)
         num_test_data = np.stack(num_arr, 1)
         num_test_data = torch.tensor(num_test_data, dtype=torch.float)
-        return self.nn_model.get_predictions(cat_test_data, num_test_data)[0] + 1
+        return self.get_predictions(cat_test_data, num_test_data)[0] + 1

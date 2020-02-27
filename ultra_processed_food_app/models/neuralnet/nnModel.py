@@ -1,5 +1,7 @@
-from sklearn.externals import joblib
-import model
+import joblib
+import torch.nn as nn
+
+import ultra_processed_food_app.models.neuralnet.model
 
 
 class NNModel:

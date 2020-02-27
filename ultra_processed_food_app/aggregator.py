@@ -1,5 +1,9 @@
 import random
 import operator
+import sys
+
+sys.path.insert(1, 'models/neuralnet/')
+import nnModel
 
 # a placeholder model class to illustrate how to use the Aggregator class below
 class DummyModel:
@@ -35,7 +39,9 @@ class Aggregator:
 
         for i in range(len(model_classes)):
             for model_file in model_file_saves[i]:
-                self.models.append(model_classes[i](model_file))
+                print(model_file)
+                model_class = model_classes[i](model_file)
+                self.models.append(model_class)
 
 
     # Input: ingredients - a string version of a list of ingredients.

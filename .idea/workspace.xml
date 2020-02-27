@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efc1a9cf-12a3-425a-b1b7-1d2225a4b954" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/foodData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnmodel1.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnmodel2.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/usda_products_1_human.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel1.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel2.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/usda_products_1_human.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel3.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/aggregator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/aggregator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnModel.py" afterDir="false" />
     </list>
@@ -57,7 +53,7 @@
       <recent name="$PROJECT_DIR$/ultra_processed_food_app/models" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.__main__">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ultra_processed_food_app" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,7 +119,11 @@
       <workItem from="1582222237974" duration="2771000" />
       <workItem from="1582317223444" duration="2096000" />
       <workItem from="1582486246195" duration="11045000" />
-      <workItem from="1582643159706" duration="20423000" />
+      <workItem from="1582643159706" duration="21999000" />
+      <workItem from="1582671550968" duration="342000" />
+      <workItem from="1582678925529" duration="955000" />
+      <workItem from="1582763511631" duration="3059000" />
+      <workItem from="1582819081681" duration="827000" />
     </task>
     <task id="LOCAL-00001" summary="adding neural network to existing project">
       <created>1582226057195</created>
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582661931953</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="using the wrapper has issues">
+      <created>1582666953176</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582666953176</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +184,8 @@
     <MESSAGE value="implemented pickle to save and load a ml model" />
     <MESSAGE value="added nn model to ui" />
     <MESSAGE value="made wrapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="made wrapper" />
+    <MESSAGE value="using the wrapper has issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="using the wrapper has issues" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="76" key="#Inspections" timestamp="1582318894303">
@@ -188,68 +196,68 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1582666723952" />
-    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582661223436">
+    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582819461578">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1582661223436" />
+    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1582819461578" />
     <state x="477" y="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582051853740">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="477" y="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1582051853740" />
-    <state x="265" y="54" key="CommitChangelistDialog2" timestamp="1582661931753">
+    <state x="265" y="54" key="CommitChangelistDialog2" timestamp="1582666952904">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="1793" y="-64" key="CommitChangelistDialog2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319303028" />
-    <state x="265" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1582661931753" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1582665804818">
+    <state x="265" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1582666952904" />
+    <state width="727" height="303" key="GridCell.Tab.0.bottom" timestamp="1582819919715">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193329" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582665804818" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1582665804817">
+    <state width="727" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582819919715" />
+    <state width="727" height="303" key="GridCell.Tab.0.center" timestamp="1582819919713">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.center/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193327" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1582665804817" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1582665804817">
+    <state width="727" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1582819919713" />
+    <state width="727" height="303" key="GridCell.Tab.0.left" timestamp="1582819919712">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.left/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193326" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1582665804817" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1582665804818">
+    <state width="727" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1582819919712" />
+    <state width="727" height="303" key="GridCell.Tab.0.right" timestamp="1582819919714">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193328" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1582665804818" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1582663369618">
+    <state width="727" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1582819919714" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1582763463210">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384021" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582663369618" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582763463210" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1582659600491" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1582663369616">
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1582763463209">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384016" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1582663369616" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1582763463209" />
     <state width="1398" height="303" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1582659600489" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1582663369615">
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1582763463208">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384015" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1582663369615" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1582763463208" />
     <state width="1398" height="303" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1582659600488" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1582663369617">
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1582763463209">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384017" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1582663369617" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1582763463209" />
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1582659600490" />
-    <state x="420" y="233" key="Vcs.Push.Dialog.v2" timestamp="1582655021657">
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2" timestamp="1582666957109">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="2000" y="151" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319335177" />
-    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1582655021657" />
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1582666957109" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582663058166">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
@@ -264,7 +272,7 @@
     <state x="352" y="248" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1582661942792" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ultra_processed_food_app$main.coverage" NAME="main Coverage Results" MODIFIED="1582664183222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
-    <SUITE FILE_PATH="coverage/ultra_processed_food_app$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1582665804808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app" />
+    <SUITE FILE_PATH="coverage/ultra_processed_food_app$main.coverage" NAME="main Coverage Results" MODIFIED="1582766218952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
+    <SUITE FILE_PATH="coverage/ultra_processed_food_app$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1582819919700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app" />
   </component>
 </project>

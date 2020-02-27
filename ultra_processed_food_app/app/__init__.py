@@ -18,8 +18,10 @@ import openfoodfacts
 from aggregator import Aggregator
 from aggregator import DummyModel
 
-from ultra_processed_food_app.models.neuralnet.nnModel import NNModel
-import ultra_processed_food_app.models.neuralnet.model
+import sys
+
+sys.path.insert(1, 'models/neuralnet/')
+import nnModel
 
 USDA_API_KEY = 'AemedCUPSQHBrbfoJdkfrdFSbtS9ogDP7YpCWDTN'
 
@@ -127,7 +129,7 @@ class UltraProcessedFoodApp(App):
     def __init__(self, **kwargs):
         self.reportData = None
         #insert your model class names here. Replace 'DummyModel' with your ai model class name
-        self.models_aggregator = Aggregator([NNModel], [['nnmodel2.pkl']])
+        self.models_aggregator = Aggregator([nnModel.NNModel], [['nnmodel3.pkl']])
         super(UltraProcessedFoodApp, self).__init__(**kwargs)
 
     def build(self):
