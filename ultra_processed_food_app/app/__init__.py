@@ -22,6 +22,8 @@ import sys
 
 sys.path.insert(1, 'models/neuralnet/')
 import nnModel
+sys.path.insert(1, 'models/randomforest/')
+import foodRandomForest
 
 USDA_API_KEY = 'AemedCUPSQHBrbfoJdkfrdFSbtS9ogDP7YpCWDTN'
 
@@ -129,7 +131,70 @@ class UltraProcessedFoodApp(App):
     def __init__(self, **kwargs):
         self.reportData = None
         #insert your model class names here. Replace 'DummyModel' with your ai model class name
-        self.models_aggregator = Aggregator([nnModel.NNModel], [['nnmodel3.pkl']])
+        self.models_aggregator = Aggregator([nnModel.NNModel, foodRandomForest.FoodRandomForest],
+                                            [['nnmodels/nnmodel0.pkl',
+                                              'nnmodels/nnmodel1.pkl',
+                                              'nnmodels/nnmodel2.pkl',
+                                              'nnmodels/nnmodel3.pkl',
+                                              'nnmodels/nnmodel4.pkl',
+                                              'nnmodels/nnmodel5.pkl',
+                                              'nnmodels/nnmodel6.pkl',
+                                              'nnmodels/nnmodel7.pkl',
+                                              'nnmodels/nnmodel8.pkl',
+                                              'nnmodels/nnmodel9.pkl',
+                                              'nnmodels/nnmodel10.pkl',
+                                              'nnmodels/nnmodel11.pkl',
+                                              'nnmodels/nnmodel12.pkl',
+                                              'nnmodels/nnmodel13.pkl',
+                                              'nnmodels/nnmodel14.pkl',
+                                              'nnmodels/nnmodel15.pkl',
+                                              'nnmodels/nnmodel16.pkl',
+                                              'nnmodels/nnmodel17.pkl',
+                                              'nnmodels/nnmodel18.pkl',
+                                              'nnmodels/nnmodel19.pkl',
+                                              'nnmodels/nnmodel20.pkl',
+                                              'nnmodels/nnmodel21.pkl',
+                                              'nnmodels/nnmodel22.pkl',
+                                              'nnmodels/nnmodel23.pkl',
+                                              'nnmodels/nnmodel24.pkl',
+                                              'nnmodels/nnmodel25.pkl',
+                                              'nnmodels/nnmodel26.pkl',
+                                              'nnmodels/nnmodel27.pkl',
+                                              'nnmodels/nnmodel28.pkl',
+                                              'nnmodels/nnmodel29.pkl',
+                                              'nnmodels/nnmodel30.pkl'
+                                              ],
+                                             ['rf-models/randomforest0.joblib',
+                                              'rf-models/randomforest1.joblib',
+                                              'rf-models/randomforest2.joblib',
+                                              'rf-models/randomforest3.joblib',
+                                              'rf-models/randomforest4.joblib',
+                                              'rf-models/randomforest5.joblib',
+                                              'rf-models/randomforest6.joblib',
+                                              'rf-models/randomforest7.joblib',
+                                              'rf-models/randomforest8.joblib',
+                                              'rf-models/randomforest9.joblib',
+                                              'rf-models/randomforest10.joblib',
+                                              'rf-models/randomforest11.joblib',
+                                              'rf-models/randomforest12.joblib',
+                                              'rf-models/randomforest13.joblib',
+                                              'rf-models/randomforest14.joblib',
+                                              'rf-models/randomforest15.joblib',
+                                              'rf-models/randomforest16.joblib',
+                                              'rf-models/randomforest17.joblib',
+                                              'rf-models/randomforest18.joblib',
+                                              'rf-models/randomforest19.joblib',
+                                              'rf-models/randomforest20.joblib',
+                                              'rf-models/randomforest21.joblib',
+                                              'rf-models/randomforest22.joblib',
+                                              'rf-models/randomforest23.joblib',
+                                              'rf-models/randomforest24.joblib',
+                                              'rf-models/randomforest25.joblib',
+                                              'rf-models/randomforest26.joblib',
+                                              'rf-models/randomforest27.joblib',
+                                              'rf-models/randomforest28.joblib',
+                                              'rf-models/randomforest29.joblib'
+                                              ]])
         super(UltraProcessedFoodApp, self).__init__(**kwargs)
 
     def build(self):
