@@ -1,52 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="efc1a9cf-12a3-425a-b1b7-1d2225a4b954" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="NNModel" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JupyterTrust" id="0d364908-72b0-4f13-bc74-403b03baa888" />
-  <component name="ProjectId" id="1XzbGWsu0t4fYLZ9QZObUrS0IHN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ultra_processed_food_app" />
-    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ultra_processed_food_app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ultra_processed_food_app" />
-      <recent name="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
-      <recent name="$PROJECT_DIR$/ultra_processed_food_app/models" />
-    </key>
   </component>
   <component name="RunManager" selected="Python.__main__">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -100,195 +60,18 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="efc1a9cf-12a3-425a-b1b7-1d2225a4b954" name="Default Changelist" comment="" />
-      <created>1582051774375</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1582051774375</updated>
-      <workItem from="1582051799092" duration="986000" />
-      <workItem from="1582222237974" duration="2771000" />
-      <workItem from="1582317223444" duration="2096000" />
-      <workItem from="1582486246195" duration="11045000" />
-      <workItem from="1582643159706" duration="21999000" />
-      <workItem from="1582671550968" duration="342000" />
-      <workItem from="1582678925529" duration="955000" />
-      <workItem from="1582763511631" duration="3059000" />
-      <workItem from="1582819081681" duration="933000" />
-      <workItem from="1583257035710" duration="5214000" />
-    </task>
-    <task id="LOCAL-00001" summary="adding neural network to existing project">
-      <created>1582226057195</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1582226057195</updated>
-    </task>
-    <task id="LOCAL-00002" summary="implemented pickle to save and load a ml model">
-      <created>1582319303307</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1582319303307</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added nn model to ui">
-      <created>1582655020279</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1582655020280</updated>
-    </task>
-    <task id="LOCAL-00004" summary="made wrapper">
-      <created>1582661931952</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1582661931953</updated>
-    </task>
-    <task id="LOCAL-00005" summary="using the wrapper has issues">
-      <created>1582666953176</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1582666953176</updated>
-    </task>
-    <task id="LOCAL-00006" summary="neural network model is integrated with the ui">
-      <created>1582819992562</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1582819992562</updated>
-    </task>
-    <task id="LOCAL-00007" summary="random forest model is in and working">
-      <created>1583265060009</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1583265060009</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding neural network to existing project" />
-    <MESSAGE value="implemented pickle to save and load a ml model" />
-    <MESSAGE value="added nn model to ui" />
-    <MESSAGE value="made wrapper" />
-    <MESSAGE value="using the wrapper has issues" />
-    <MESSAGE value="neural network model is integrated with the ui" />
-    <MESSAGE value="random forest model is in and working" />
-    <option name="LAST_COMMIT_MESSAGE" value="random forest model is in and working" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="2000" y="76" key="#Inspections" timestamp="1582318894303">
-      <screen x="1440" y="-129" width="1920" height="1080" />
-    </state>
-    <state x="2000" y="76" key="#Inspections/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582318894303" />
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582666723952">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583430366066">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1582666723952" />
-    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583258417728">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1583430366066" />
+    <state x="272" y="52" key="CommitChangelistDialog2" timestamp="1583430434448">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="434" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1583258417728" />
-    <state x="482" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583257339471">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="482" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583257339471" />
-    <state x="477" y="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582051853740">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="477" y="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1582051853740" />
-    <state x="540" y="49" key="CommitChangelistDialog2" timestamp="1583265055959">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="1793" y="-64" key="CommitChangelistDialog2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319303028" />
-    <state x="540" y="49" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583265055959" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1583265241275">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193329" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583265241275" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1583265241275">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.center/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193327" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583265241275" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1583265241274">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.left/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193326" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583265241274" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1583265241275">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193328" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583265241275" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1582763463210">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384021" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582763463210" />
-    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1582659600491" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1582763463209">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384016" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1582763463209" />
-    <state width="1398" height="303" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1582659600489" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1582763463208">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384015" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1582763463208" />
-    <state width="1398" height="303" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1582659600488" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1582763463209">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384017" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1582763463209" />
-    <state width="1398" height="303" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1582659600490" />
-    <state x="420" y="233" key="Vcs.Push.Dialog.v2" timestamp="1583265063695">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="2000" y="151" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319335177" />
-    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583265063695" />
-    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582663058166">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.797@0.23.1440.797" timestamp="1582663058166" />
-    <state x="378" y="85" width="683" height="729" key="find.popup" timestamp="1582490098954">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="378" y="85" width="683" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1582490098954" />
-    <state x="352" y="248" key="git4idea.merge.GitPullDialog" timestamp="1582661942792">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="352" y="248" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1582661942792" />
+    <state x="272" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583430434448" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ultra_processed_food_app$main.coverage" NAME="main Coverage Results" MODIFIED="1583263670570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
-    <SUITE FILE_PATH="coverage/ultra_processed_food_app$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1583264889637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app" />
+    <SUITE FILE_PATH="coverage/ultra_processed_food_app$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1583430372640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ultra_processed_food_app" />
   </component>
 </project>
