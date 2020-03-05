@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efc1a9cf-12a3-425a-b1b7-1d2225a4b954" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/randomforest/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/randomforest/foodRandomForest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnmodel1.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnmodel2.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet/nnmodel3.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel1.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel2.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ultra_processed_food_app/nnmodel3.pkl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +39,9 @@
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ultra_processed_food_app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ultra_processed_food_app" />
       <recent name="$PROJECT_DIR$/ultra_processed_food_app/models/neuralnet" />
@@ -126,7 +119,7 @@
       <workItem from="1582678925529" duration="955000" />
       <workItem from="1582763511631" duration="3059000" />
       <workItem from="1582819081681" duration="933000" />
-      <workItem from="1583257035710" duration="4906000" />
+      <workItem from="1583257035710" duration="5214000" />
     </task>
     <task id="LOCAL-00001" summary="adding neural network to existing project">
       <created>1582226057195</created>
@@ -170,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582819992562</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="random forest model is in and working">
+      <created>1583265060009</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583265060009</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +196,8 @@
     <MESSAGE value="made wrapper" />
     <MESSAGE value="using the wrapper has issues" />
     <MESSAGE value="neural network model is integrated with the ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="neural network model is integrated with the ui" />
+    <MESSAGE value="random forest model is in and working" />
+    <option name="LAST_COMMIT_MESSAGE" value="random forest model is in and working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="76" key="#Inspections" timestamp="1582318894303">
@@ -219,31 +220,31 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="477" y="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1582051853740" />
-    <state x="540" y="49" key="CommitChangelistDialog2" timestamp="1582819992238">
+    <state x="540" y="49" key="CommitChangelistDialog2" timestamp="1583265055959">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="1793" y="-64" key="CommitChangelistDialog2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319303028" />
-    <state x="540" y="49" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1582819992238" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1583264889649">
+    <state x="540" y="49" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583265055959" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1583265241275">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193329" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583264889649" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1583264889647">
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583265241275" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1583265241275">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.center/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193327" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583264889647" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1583264889647">
+    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583265241275" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1583265241274">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.left/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193326" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583264889647" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1583264889648">
+    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583265241274" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1583265241275">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="303" key="GridCell.Tab.0.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582650193328" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583264889648" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583265241275" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1582763463210">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -268,11 +269,11 @@
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319384017" />
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1582763463209" />
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1582659600490" />
-    <state x="420" y="233" key="Vcs.Push.Dialog.v2" timestamp="1582819994965">
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2" timestamp="1583265063695">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="2000" y="151" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-129.1920.1080@1440.-129.1920.1080" timestamp="1582319335177" />
-    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1582819994965" />
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583265063695" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582663058166">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
