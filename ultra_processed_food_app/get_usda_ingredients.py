@@ -2,7 +2,7 @@ import csv
 from os import environ
 from sys import stderr
 from requests import get as GET
-from usda import UsdaClient
+# from usda import UsdaClient
 import pickle
 import requests
 

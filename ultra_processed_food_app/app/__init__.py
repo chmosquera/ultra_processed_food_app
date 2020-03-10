@@ -27,6 +27,26 @@ import foodRandomForest
 
 USDA_API_KEY = 'AemedCUPSQHBrbfoJdkfrdFSbtS9ogDP7YpCWDTN'
 
+NOVA_BLURBS = [
+    # Nova 1
+    "[i]Minimally Processed[/i]. Foods in this group are the least processed of all. "
+    "Typically they are the direct product of a single plant or animal. Common examples include raw nuts, fruit, "
+    "leaf vegetables, uncured meat, eggs, or milk. While most Nova 1 foods are of some raw form, a very small amount "
+    "of processing is permitted for preservation.",
+    # Nova 2
+    "[i]Processed Ingredients[/i]. Products in this group are best characterized relative to their raw counterparts in NOVA group 1."
+    "Group 2 products are typically a combination of raw natural ingredients that have been lightely refined or processed. Some examples of "
+    "acceptable processing for this group include pressing, grinding, milling, and spray drying. Often products in this group are meant for use as "
+    "ingredients. Thusly, cited examples include vegetable oils, maple syrup, honey, corn starch, or salted butter.",
+    # Nova 3
+    "[i]Processed Foods[/i]. NOVA 3 products are mixtures of ingredients from the prior two groups. Foods that combine naturally based ingredients and "
+    "a small number of simple preservative methods belong in this group. Some examples include fruit in syrup, canned meat, smoked meat, cheese, and some fresh breads.",
+    # Nova 4
+    "[i]ULTRA-Processed Foods[/i]. NOVA 4 products are \"industrial formulations\" consisting of many ingredients both natural and artificial. "
+    "Foods may fall into this category due to a large number of naturally processed ingredients, but often the include more significantly processed ingredients or artificial ingredients. "
+    "Examples of such ingredients are \"casein, lactose, whey, gluten [...], hydrolysed porteins, high fructose corn syrup, emulsifiers, and non-sugar sweeteners.\""
+]
+
 REPORT_TEMPLATE = '''\
 [b]fdcid:[/b] {reportData.fdcid}
 [b]Brand:[/b] {reportData.brand}
@@ -36,6 +56,8 @@ REPORT_TEMPLATE = '''\
 [b]Ingredients:[/b] {reportData.ingredients}
 
 [size=24][b]NOVA Score:[/b] {reportData.nova} [/size]
+{blurb}
+[size=12]Monteiro, Carlos A., et al. "NOVA. The star shines bright." [i]World Nutrition[/i] 7.1-3 (2016): 28-38.[/size]
 '''
 
 class MainScreen(Screen):
@@ -109,7 +131,7 @@ class ReportLabel(Label):
     def update(self):
         app = App.get_running_app()
         if(app.reportData != None):
-            self.text = REPORT_TEMPLATE.format(reportData = app.reportData)
+            self.text = REPORT_TEMPLATE.format(reportData = app.reportData, blurb = NOVA_BLURBS[int(app.reportData.nova)-1])
             self.halign = 'left'
         else:
             self.text = "No matching item found!"
