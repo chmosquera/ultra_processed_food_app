@@ -89,7 +89,7 @@ class ScoreCollector:
             while(len(self.indices) > 0 or self.inputIdx != None):
                 self.inputIdx = self.indices.pop() if self.inputIdx == None else self.inputIdx
                 rowdata = self.inputData[self.inputIdx]
-                score = ScoreCollector._collect_score(rowdata)
+                score = ScoreCollector._collect_score(rowdata, len(self.indices))
                 self.inputIdx = None
                 rowdata.append(score)
                 self.outputWriter.writerow(rowdata)
@@ -97,17 +97,20 @@ class ScoreCollector:
             if(self.inputIdx == None): self.inputIdx = 0;
             for self.inputIdx in range(self.inputIdx, len(self.inputData)):
                 rowdata = self.inputData[self.inputIdx]
-                score = ScoreCollector._collect_score(rowdata)
+                score = ScoreCollector._collect_score(rowdata, self.inputIdx)
                 rowdata.append(score)
                 self.outputWriter.writerow(rowdata)
         self.finished = True
 
     @staticmethod
-    def _collect_score(data: list):
+    def _collect_score(data: list, productIndex = None):
         print("================================================================================\n")
-        print("Product: ", data[1])
+        if(productIndex != None): 
+            print(f"Product {productIndex}:", data[1])
+        else:
+            print("Product:", data[1])
         print("Ingredients: ", data[3])
-        print("--------------------")
+        print("-------------------------")
         score = None
         while(score == None):
             try: 
