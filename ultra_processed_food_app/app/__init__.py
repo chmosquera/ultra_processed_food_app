@@ -21,9 +21,9 @@ from aggregator import DummyModel
 import sys
 
 sys.path.insert(1, 'models/neuralnet/')
-import nnModel
+from models.neuralnet import nnModel
 sys.path.insert(1, 'models/randomforest/')
-import foodRandomForest
+from models.randomforest import foodRandomForest
 
 USDA_API_KEY = 'AemedCUPSQHBrbfoJdkfrdFSbtS9ogDP7YpCWDTN'
 
